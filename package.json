@@ -26,7 +26,7 @@
     "yup": "^1.7.1"
   },
   "devDependencies": {
-    "@eslint/js": "^10.0.1",
+    "@eslint/js": "^9.39.4",
     "@types/humps": "^2.0.6",
     "@types/node": "^24.12.3",
     "@types/ramda": "^0.31.1",
