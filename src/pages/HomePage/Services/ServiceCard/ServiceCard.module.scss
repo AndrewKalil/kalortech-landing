@@ -1,0 +1,113 @@
+.service {
+  background: var(--carbon);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  padding: 36px 32px 36px;
+  min-height: 260px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+  transition:
+    background 320ms cubic-bezier(0.22, 0.61, 0.36, 1),
+    border-color 320ms ease,
+    transform 320ms cubic-bezier(0.22, 0.61, 0.36, 1);
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    background: var(--volt);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 480ms cubic-bezier(0.22, 0.61, 0.36, 1);
+  }
+
+  &:hover {
+    background: var(--carbon-2);
+    border-color: rgba(200, 255, 61, 0.3);
+    transform: translateY(-4px);
+
+    &::after { transform: scaleX(1); }
+
+    .num { color: var(--volt); }
+    .title { transform: translateX(4px); }
+
+    .icon {
+      color: var(--volt);
+      opacity: 1;
+      transform: scale(1.08) rotate(-4deg);
+    }
+  }
+}
+
+.icon {
+  position: absolute;
+  top: 28px;
+  right: 28px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--bone);
+  opacity: 0.55;
+  transition:
+    color 320ms ease,
+    opacity 320ms ease,
+    transform 380ms cubic-bezier(0.22, 0.61, 0.36, 1);
+
+  svg {
+    width: 24px;
+    height: 24px;
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 1.6;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+}
+
+.num {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  color: var(--text-soft);
+  transition: color 280ms ease;
+}
+
+.title {
+  font-size: clamp(20px, 1.7vw, 24px);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin: 18px 0 12px;
+  transition: transform 320ms cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.desc {
+  font-size: 14.5px;
+  line-height: 1.55;
+  color: var(--text-mute);
+}
+
+@media (max-width: 600px) {
+  .service {
+    min-height: auto;
+    padding: 28px 24px;
+    border-radius: var(--r-md);
+  }
+
+  .icon {
+    top: 24px;
+    right: 24px;
+    width: 36px;
+    height: 36px;
+
+    svg { width: 22px; height: 22px; }
+  }
+}

@@ -1,0 +1,83 @@
+.hero {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: clamp(100px, 10vw, 150px) var(--gutter) clamp(40px, 5vw, 70px);
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 20%;
+    left: -10%;
+    width: min(500px, 80vw);
+    height: min(500px, 80vw);
+    background: radial-gradient(circle, rgba(200, 255, 61, 0.08) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: -1;
+  }
+}
+
+.kicker {
+  margin-bottom: 24px;
+  animation: fadeUp 700ms ease both;
+}
+
+.h1 {
+  font-size: clamp(34px, 5.4vw, 80px);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  margin: 0;
+  max-width: 18ch;
+  animation: fadeUp 800ms 80ms ease both;
+}
+
+.hl {
+  background: var(--volt);
+  color: var(--ink);
+  padding: 0 0.12em;
+  border-radius: 4px;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+.sub {
+  font-size: clamp(15px, 1.2vw, 17px);
+  line-height: 1.55;
+  color: var(--text-mute);
+  max-width: 56ch;
+  margin: 22px 0 0;
+  animation: fadeUp 800ms 160ms ease both;
+}
+
+.cta {
+  display: flex;
+  gap: 12px;
+  margin-top: 32px;
+  flex-wrap: wrap;
+  animation: fadeUp 800ms 240ms ease both;
+}
+
+.meta {
+  display: flex;
+  gap: clamp(20px, 4vw, 40px);
+  margin-top: clamp(40px, 5vw, 60px);
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+  flex-wrap: wrap;
+  animation: fadeUp 800ms 320ms ease both;
+}
+
+.metaItem {
+  .mono { display: block; margin-bottom: 6px; }
+}
+
+.metaVal {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0); }
+}

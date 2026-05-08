@@ -1,0 +1,52 @@
+{
+  "name": "kalort-landing",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@kalortech/eslint-config": "github:kalortech/eslint-config#semver:^1.0.0",
+    "@kalortech/shared-logic": "github:kalortech/shared-logic#semver:^1.6.0",
+    "antd": "^6.3.7",
+    "classnames": "^2.5.1",
+    "formik": "^2.4.9",
+    "humps": "^2.0.1",
+    "lucide-react": "^1.14.0",
+    "ramda": "^0.32.0",
+    "ramda-adjunct": "^6.0.0",
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5",
+    "react-router-dom": "^7.15.0",
+    "resend": "^6.12.3",
+    "yup": "^1.7.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/humps": "^2.0.6",
+    "@types/node": "^24.12.3",
+    "@types/ramda": "^0.31.1",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@vercel/node": "^5.7.15",
+    "@vitejs/plugin-react": "^6.0.1",
+    "autoprefixer": "^10.5.0",
+    "eslint": "^9.39.4",
+    "eslint-import-resolver-typescript": "^4.4.4",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "eslint-plugin-react-refresh": "^0.5.2",
+    "globals": "^17.5.0",
+    "postcss": "^8.5.14",
+    "prettier": "^3.8.3",
+    "sass": "^1.99.0",
+    "sharp": "^0.34.5",
+    "tailwindcss": "^3.4.19",
+    "typescript": "~6.0.2",
+    "typescript-eslint": "^8.58.2",
+    "vite": "^8.0.10"
+  }
+}

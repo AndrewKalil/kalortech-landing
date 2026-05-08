@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <defs>
+    
+  </defs>
+  <rect x="0" y="0" width="1024" height="1024" rx="228" ry="228" fill="#0A0A0A"></rect>
+  <text x="512" y="675" font-size="480" text-anchor="middle" letter-spacing="-9" font-family="&#39;Inter&#39;,&#39;Helvetica Neue&#39;,Helvetica,Arial,sans-serif">
+    <tspan class="mark-br" fill="#C8FF3D">&lt;</tspan><tspan class="mark-k" fill="#FAFAF7" dx="6">k</tspan><tspan class="mark-br" fill="#C8FF3D" dx="2">/&gt;</tspan>
+  </text>
+</svg>

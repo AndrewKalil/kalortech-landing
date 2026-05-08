@@ -1,0 +1,29 @@
+.mark {
+  font-family: var(--font);
+  font-weight: 500;
+  color: var(--bone);
+  line-height: 1;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: baseline;
+  letter-spacing: -0.04em;
+}
+
+.br {
+  font-weight: 500;
+  color: var(--volt);
+  opacity: 0.72;
+  transition: opacity 240ms ease;
+
+  &.left  { margin-right: 0.02em; }
+  &.right { margin-left:  0.01em; }
+}
+
+.mark:hover .br {
+  opacity: 1;
+}
+
+.xs { font-size: 18px; }
+.sm { font-size: 28px; }
+.md { font-size: 56px; }
+.lg { font-size: clamp(56px, 11vw, 168px); }

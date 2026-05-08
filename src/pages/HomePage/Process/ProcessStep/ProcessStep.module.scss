@@ -1,0 +1,46 @@
+.step {
+  background: var(--carbon);
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  padding: 28px 24px;
+  position: relative;
+  transition:
+    background 280ms ease,
+    border-color 280ms ease,
+    transform 280ms ease;
+  cursor: default;
+
+  &:hover {
+    background: var(--carbon-2);
+    border-color: rgba(200, 255, 61, 0.25);
+    transform: translateY(-2px);
+
+    .num { color: var(--volt); }
+  }
+}
+
+.num {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  color: var(--text-mute);
+  margin-bottom: 18px;
+  transition: color 240ms ease;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin-bottom: 10px;
+}
+
+.desc {
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--text-mute);
+}
+
+@media (max-width: 600px) {
+  .step { padding: 24px 20px; }
+}
