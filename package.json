@@ -10,8 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@kalortech/eslint-config": "github:kalortech/eslint-config#semver:^1.0.0",
-    "@kalortech/shared-logic": "github:kalortech/shared-logic#semver:^1.6.0",
+    "@kalortech/eslint-config": "^1.5.0",
+    "@kalortech/shared-logic": "^1.6.0",
     "antd": "^6.3.7",
     "classnames": "^2.5.1",
     "formik": "^2.4.9",
