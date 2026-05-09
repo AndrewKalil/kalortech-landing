@@ -76,7 +76,7 @@ SELECT
   ds.id,
   3,
   '{
-    "title": "Letty'\''s Paradise School",
+    "title": "Letty''s Paradise School",
     "description": "Bilingual elementary school website with program details and enrollment information.",
     "websiteUrl": "https://www.lettysparadise.com/",
     "image": "",
@@ -185,7 +185,7 @@ SELECT
   9,
   '{
     "title": "Fuse Finance — Reporting Platform",
-    "description": "Shipped a client-facing reporting platform for Fuse'\''s loan origination software. Lenders self-serve their own data through pre-built and custom reports, eliminating a manual bottleneck and reducing ad-hoc data requests to engineering by ~35%.",
+    "description": "Shipped a client-facing reporting platform for Fuse''s loan origination software. Lenders self-serve their own data through pre-built and custom reports, eliminating a manual bottleneck and reducing ad-hoc data requests to engineering by ~35%.",
     "websiteUrl": "https://www.fusefinance.com/",
     "image": "",
     "tags": ["React", "TypeScript", "Node.js", "Frontend Engineering"],

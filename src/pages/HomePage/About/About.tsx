@@ -8,6 +8,7 @@ export const About = () => (
     </div>
     <div className={styles.grid}>
       <div className={`${styles.label} reveal`}>
+        <img src="/profile_picture.jpg" alt="Andrew Kalil" className={styles.photo} />
         <span className="mono">{"// FOUNDER"}</span>
         <div className={styles.name}>Andrew Kalil</div>
         <div className={styles.role}>SOFTWARE ENGINEER · KALORTECH</div>
