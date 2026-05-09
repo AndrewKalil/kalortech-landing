@@ -1,0 +1,46 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.card {
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  padding: 20px 24px;
+  background: var(--carbon-2);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cardHead {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.fileName {
+  font-family: var(--mono);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--volt);
+}
+
+.trigger {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--text-soft);
+  background: rgba(250, 250, 247, 0.06);
+  border: 1px solid var(--line);
+  padding: 3px 8px;
+  border-radius: var(--r-pill);
+}
+
+.desc {
+  margin: 0;
+  font-size: 13px;
+  color: var(--text-mute);
+  line-height: 1.65;
+}

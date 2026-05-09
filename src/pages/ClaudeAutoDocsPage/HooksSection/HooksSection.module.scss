@@ -1,0 +1,26 @@
+.grid {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.hookName {
+  font-family: var(--mono);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--volt);
+  margin: 0;
+}
+
+.hookDesc {
+  margin: 0;
+  font-size: 14px;
+  color: var(--text-mute);
+  line-height: 1.7;
+}
