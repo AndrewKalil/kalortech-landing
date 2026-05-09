@@ -1,0 +1,27 @@
+.root {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 16px 20px;
+  border: 1px solid rgba(200, 255, 61, 0.25);
+  border-radius: var(--r-md);
+  background: rgba(200, 255, 61, 0.05);
+}
+
+.icon {
+  color: var(--volt);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.text {
+  margin: 0;
+  font-size: 14px;
+  color: var(--text-mute);
+  line-height: 1.6;
+
+  strong {
+    color: var(--bone);
+    font-weight: 600;
+  }
+}

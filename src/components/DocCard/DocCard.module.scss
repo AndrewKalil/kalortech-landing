@@ -1,0 +1,138 @@
+.root {
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  padding: 32px;
+  background: var(--carbon-2);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.head {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.name {
+  font-family: var(--mono);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--volt);
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+.signature {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--text-mute);
+  word-break: break-all;
+  background: rgba(250, 250, 247, 0.04);
+  padding: 6px 10px;
+  border-radius: var(--r-sm);
+  display: block;
+}
+
+.description {
+  margin: 0;
+  color: var(--text-mute);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sectionLabel {
+  margin: 0;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-soft);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+
+  th {
+    text-align: left;
+    color: var(--text-soft);
+    font-weight: 500;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 6px 12px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  td {
+    padding: 8px 12px;
+    color: var(--text-mute);
+    border-bottom: 1px solid var(--line-soft);
+    vertical-align: top;
+    line-height: 1.5;
+  }
+
+  tr:last-child td {
+    border-bottom: none;
+  }
+}
+
+.code {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--bone);
+  background: rgba(250, 250, 247, 0.07);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.returnType {
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--bone);
+  word-break: break-all;
+}
+
+.returnDesc {
+  margin: 4px 0 0;
+  font-size: 13px;
+  color: var(--text-mute);
+  line-height: 1.6;
+}
+
+.examples {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.exTitle {
+  margin: 0 0 6px;
+  font-size: 12px;
+  color: var(--text-soft);
+  font-weight: 500;
+}
+
+.notes {
+  margin: 0;
+  padding: 0 0 0 16px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  border-left: 2px solid var(--volt);
+
+  li {
+    font-size: 13px;
+    color: var(--text-mute);
+    line-height: 1.6;
+  }
+}
