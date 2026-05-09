@@ -1,3 +1,7 @@
+.placeholder {
+  min-height: clamp(220px, 32vw, 420px);
+}
+
 .carousel {
   position: relative;
 }

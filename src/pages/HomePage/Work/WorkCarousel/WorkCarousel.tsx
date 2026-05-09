@@ -10,6 +10,7 @@ const DESKTOP_VISIBLE = 3;
 
 export const WorkCarousel = (props: WorkCarouselProps) => {
   const { projects } = props;
+
   const {
     cloneCount,
     isInfinite,
@@ -24,6 +25,8 @@ export const WorkCarousel = (props: WorkCarouselProps) => {
     onPointerDownHandler,
     onPointerUpHandler,
   } = useCarousel(projects.length, DESKTOP_VISIBLE);
+
+  if (projects.length === 0) return <div className={styles.placeholder} />;
 
   const extendedItems = isInfinite
     ? [
