@@ -1,0 +1,18 @@
+.meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  background: rgba(200, 255, 61, 0.12);
+  color: var(--volt);
+  font-family: var(--mono);
+  font-size: 11px;
+  border-radius: var(--r-sm);
+}
