@@ -1,0 +1,68 @@
+.root {
+  @apply min-h-screen flex items-center justify-center;
+  background: var(--carbon);
+}
+
+.form {
+  @apply flex flex-col gap-5 w-full;
+  max-width: 400px;
+  padding: 40px;
+  background: var(--carbon-2);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+}
+
+.title {
+  @apply text-2xl font-semibold mb-2;
+  letter-spacing: -0.03em;
+  color: var(--bone);
+}
+
+.field {
+  @apply flex flex-col gap-1.5;
+}
+
+.label {
+  font-size: 13px;
+  color: var(--text-soft);
+  font-weight: 500;
+}
+
+.input {
+  @apply w-full px-3 py-2 text-sm rounded-md outline-none;
+  background: var(--carbon);
+  border: 1px solid var(--line);
+  color: var(--bone);
+  transition: border-color 200ms ease;
+
+  &::placeholder {
+    color: var(--text-mute);
+  }
+
+  &:focus {
+    border-color: rgba(200, 255, 61, 0.4);
+  }
+}
+
+.error {
+  font-size: 12px;
+  color: #f87171;
+}
+
+.submit {
+  @apply w-full py-2.5 text-sm font-semibold rounded-md mt-2;
+  background: var(--volt);
+  color: var(--carbon);
+  transition: opacity 200ms ease;
+  cursor: pointer;
+  border: 0;
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: default;
+  }
+
+  &:not(:disabled):hover {
+    opacity: 0.88;
+  }
+}

@@ -1,0 +1,111 @@
+.card {
+  background: var(--carbon-2);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  overflow: hidden;
+}
+
+.header {
+  @apply flex items-center justify-between px-5 py-3;
+  border-bottom: 1px solid var(--line);
+}
+
+.order {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--text-mute);
+}
+
+.delete {
+  font-size: 12px;
+  color: #f87171;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: var(--r-sm);
+  transition: background 200ms ease;
+
+  &:hover {
+    background: rgba(248, 113, 113, 0.1);
+  }
+}
+
+.imagePicker {
+  @apply w-full;
+  aspect-ratio: 16 / 8;
+  background: var(--carbon);
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 200ms ease;
+
+  &:hover {
+    background: var(--carbon-2);
+  }
+}
+
+.previewImg {
+  @apply w-full h-full;
+  object-fit: cover;
+}
+
+.imagePlaceholder {
+  font-size: 13px;
+  color: var(--text-mute);
+}
+
+.fileInput {
+  display: none;
+}
+
+.fields {
+  @apply flex flex-col gap-4 p-5;
+}
+
+.row {
+  @apply flex flex-col gap-1.5;
+}
+
+.rowInline {
+  @apply flex items-center gap-3;
+}
+
+.label {
+  font-size: 12px;
+  color: var(--text-soft);
+  font-weight: 500;
+}
+
+.input,
+.textarea,
+.select {
+  @apply w-full px-3 py-2 text-sm rounded-md outline-none;
+  background: var(--carbon);
+  border: 1px solid var(--line);
+  color: var(--bone);
+  font-family: inherit;
+  transition: border-color 200ms ease;
+
+  &::placeholder {
+    color: var(--text-mute);
+  }
+
+  &:focus {
+    border-color: rgba(200, 255, 61, 0.4);
+  }
+}
+
+.textarea {
+  resize: vertical;
+}
+
+.checkbox {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--volt);
+  cursor: pointer;
+}
