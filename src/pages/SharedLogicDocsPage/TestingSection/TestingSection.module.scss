@@ -1,0 +1,20 @@
+.importNote {
+  margin: -24px 0 32px;
+  font-size: 14px;
+  color: var(--text-soft);
+}
+
+.importPath {
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--volt);
+  background: rgba(200, 255, 61, 0.08);
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
