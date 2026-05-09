@@ -1,0 +1,36 @@
+.cta {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: clamp(50px, 7vw, 80px) var(--gutter);
+  border-top: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.text {
+  font-size: clamp(20px, 2.5vw, 32px);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 24px;
+  background: var(--volt);
+  color: var(--ink);
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: var(--r-sm);
+  transition: transform 200ms ease, box-shadow 200ms ease;
+  white-space: nowrap;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 30px -10px rgba(200, 255, 61, 0.4);
+  }
+}
