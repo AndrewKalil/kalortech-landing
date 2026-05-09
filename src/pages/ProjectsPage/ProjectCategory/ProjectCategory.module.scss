@@ -1,0 +1,21 @@
+.header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 18px;
+  margin-bottom: clamp(32px, 5vw, 48px);
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.title {
+  font-size: clamp(28px, 4vw, 48px);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+
+.single {
+  max-width: 560px;
+}
