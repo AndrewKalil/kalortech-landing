@@ -1,0 +1,66 @@
+.groups {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.groupHead {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.groupName {
+  font-family: var(--mono);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--volt);
+  margin: 0;
+}
+
+.groupPath {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--text-soft);
+}
+
+.fileList {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  overflow: hidden;
+}
+
+.fileRow {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  padding: 10px 16px;
+  border-bottom: 1px solid var(--line-soft);
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.fileName {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--bone);
+  flex-shrink: 0;
+  min-width: 220px;
+}
+
+.fileDesc {
+  font-size: 13px;
+  color: var(--text-soft);
+  line-height: 1.5;
+}
