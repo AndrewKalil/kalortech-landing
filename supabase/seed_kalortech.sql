@@ -123,3 +123,57 @@ SELECT
 FROM tenants t
 JOIN data_sources ds ON ds.tenant_id = t.id AND ds.slug = 'projects'
 WHERE t.slug = 'kalortech';
+
+INSERT INTO data_source_entries (tenant_id, data_source_id, display_order, data)
+SELECT
+  t.id,
+  ds.id,
+  6,
+  '{
+    "title": "Shared Logic",
+    "description": "Private npm library of shared React hooks and utility functions used across all kalortech projects. Includes useFormik, useDisclosure, useDraftState, executeQuery, preparePayload, and more.",
+    "websiteUrl": "https://kalort.com/docs/shared-logic",
+    "image": "",
+    "tags": ["TypeScript", "React", "npm"],
+    "category": "Library",
+    "isFeatured": true
+  }'::json
+FROM tenants t
+JOIN data_sources ds ON ds.tenant_id = t.id AND ds.slug = 'projects'
+WHERE t.slug = 'kalortech';
+
+INSERT INTO data_source_entries (tenant_id, data_source_id, display_order, data)
+SELECT
+  t.id,
+  ds.id,
+  7,
+  '{
+    "title": "ESLint Config",
+    "description": "Shared ESLint flat config for all kalortech projects. Enforces import order, named exports, naming conventions, restricted imports, and custom rules for React and TypeScript codebases.",
+    "websiteUrl": "https://kalort.com/docs/eslint-config",
+    "image": "",
+    "tags": ["ESLint", "TypeScript", "React"],
+    "category": "Library",
+    "isFeatured": true
+  }'::json
+FROM tenants t
+JOIN data_sources ds ON ds.tenant_id = t.id AND ds.slug = 'projects'
+WHERE t.slug = 'kalortech';
+
+INSERT INTO data_source_entries (tenant_id, data_source_id, display_order, data)
+SELECT
+  t.id,
+  ds.id,
+  8,
+  '{
+    "title": "Claude Auto-Sufficiency",
+    "description": "Private knowledge center and context system for Claude Code. Single source of truth for React + Supabase project standards, coding conventions, hooks usage, and AI-assisted development workflows.",
+    "websiteUrl": "https://kalort.com/docs/claude-auto-sufficiency",
+    "image": "",
+    "tags": ["Claude", "AI", "Developer Tools"],
+    "category": "Library",
+    "isFeatured": false
+  }'::json
+FROM tenants t
+JOIN data_sources ds ON ds.tenant_id = t.id AND ds.slug = 'projects'
+WHERE t.slug = 'kalortech';
