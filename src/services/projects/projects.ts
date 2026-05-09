@@ -37,7 +37,7 @@ export const getProjects = async (tenantSlug: string): Promise<Project[]> => {
     category: entry.data.category,
     websiteUrl: entry.data.websiteUrl,
     image: entry.data.image ?? "",
-    tags: entry.data.tags ?? [],
+    tags: Array.isArray(entry.data.tags) ? entry.data.tags : [],
     isFeatured: entry.data.isFeatured ?? false,
   }));
 };

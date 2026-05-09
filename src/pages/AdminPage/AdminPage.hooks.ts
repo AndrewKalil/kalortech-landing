@@ -138,6 +138,17 @@ export const useAdminPage = () => {
     [values.entries, setFieldValue],
   );
 
+  const onTagsChangeHandler = useCallback(
+    (index: number, rawValue: string) => {
+      const tags = rawValue
+        .split(",")
+        .map((t) => t.trim())
+        .filter((t) => t.length > 0);
+      void setFieldValue(`entries.${index}.data.tags`, tags);
+    },
+    [setFieldValue],
+  );
+
   const onFileChangeHandler = useCallback((entryId: string, file: File) => {
     pendingFilesRef.current.set(entryId, file);
     const url = URL.createObjectURL(file);
@@ -165,6 +176,7 @@ export const useAdminPage = () => {
     onAddProjectHandler,
     onDeleteEntryHandler,
     onFileChangeHandler,
+    onTagsChangeHandler,
     onSignOutHandler,
     onCancelHandler,
   };

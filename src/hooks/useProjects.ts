@@ -4,16 +4,20 @@ import { TENANT_SLUG } from "~constants";
 import { getProjects } from "~services";
 import type { Project } from "~services";
 
+let projectsCache: Project[] | null = null;
+
 export const useProjects = () => {
-  const [projects, setProjects] = useState<Project[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
+  const [projects, setProjects] = useState<Project[]>(projectsCache ?? []);
+  const [isLoading, setIsLoading] = useState(projectsCache === null);
 
   useEffect(() => {
+    if (projectsCache !== null) return;
     let cancelled = false;
     setIsLoading(true);
     getProjects(TENANT_SLUG)
       .then((data) => {
         if (!cancelled) {
+          projectsCache = data;
           setProjects(data);
           setIsLoading(false);
         }

@@ -177,3 +177,93 @@ SELECT
 FROM tenants t
 JOIN data_sources ds ON ds.tenant_id = t.id AND ds.slug = 'projects'
 WHERE t.slug = 'kalortech';
+
+INSERT INTO data_source_entries (tenant_id, data_source_id, display_order, data)
+SELECT
+  t.id,
+  ds.id,
+  9,
+  '{
+    "title": "Fuse Finance — Reporting Platform",
+    "description": "Shipped a client-facing reporting platform for Fuse'\''s loan origination software. Lenders self-serve their own data through pre-built and custom reports, eliminating a manual bottleneck and reducing ad-hoc data requests to engineering by ~35%.",
+    "websiteUrl": "https://www.fusefinance.com/",
+    "image": "",
+    "tags": ["React", "TypeScript", "Node.js", "Frontend Engineering"],
+    "category": "Production Contribution",
+    "isFeatured": true
+  }'::json
+FROM tenants t
+JOIN data_sources ds ON ds.tenant_id = t.id AND ds.slug = 'projects'
+WHERE t.slug = 'kalortech';
+
+INSERT INTO data_source_entries (tenant_id, data_source_id, display_order, data)
+SELECT
+  t.id,
+  ds.id,
+  10,
+  '{
+    "title": "Fuse Finance — Internal Schema Management",
+    "description": "Built a self-serve internal data schema management system used by 4+ non-engineering teams at Fuse. Eliminated an entire category of support tickets and gave business teams direct control over data structures without engineering involvement.",
+    "websiteUrl": "https://www.fusefinance.com/",
+    "image": "",
+    "tags": ["React", "TypeScript", "Internal Tooling", "Low-code"],
+    "category": "Production Contribution",
+    "isFeatured": false
+  }'::json
+FROM tenants t
+JOIN data_sources ds ON ds.tenant_id = t.id AND ds.slug = 'projects'
+WHERE t.slug = 'kalortech';
+
+INSERT INTO data_source_entries (tenant_id, data_source_id, display_order, data)
+SELECT
+  t.id,
+  ds.id,
+  11,
+  '{
+    "title": "Fuse Finance — Shared Component Library & ESLint",
+    "description": "Contributed to a shared React + TypeScript component library used across 3+ internal products. Authored custom ESLint rules adopted across the codebase, cutting PR review cycles for style and consistency.",
+    "websiteUrl": "https://www.fusefinance.com/",
+    "image": "",
+    "tags": ["React", "TypeScript", "ESLint", "Design Systems"],
+    "category": "Production Contribution",
+    "isFeatured": false
+  }'::json
+FROM tenants t
+JOIN data_sources ds ON ds.tenant_id = t.id AND ds.slug = 'projects'
+WHERE t.slug = 'kalortech';
+
+INSERT INTO data_source_entries (tenant_id, data_source_id, display_order, data)
+SELECT
+  t.id,
+  ds.id,
+  12,
+  '{
+    "title": "Fuse Finance — Loan Origination Workflows",
+    "description": "As Solutions Engineer, architected end-to-end automated workflows integrating credit bureaus and Loan Origination Systems. Cut client onboarding time by ~60%. Led delivery for 10+ enterprise clients, translating business requirements into low-code configurations.",
+    "websiteUrl": "https://www.fusefinance.com/",
+    "image": "",
+    "tags": ["Solutions Engineering", "Low-code", "Credit Bureau APIs", "LOS Integrations"],
+    "category": "Production Contribution",
+    "isFeatured": true
+  }'::json
+FROM tenants t
+JOIN data_sources ds ON ds.tenant_id = t.id AND ds.slug = 'projects'
+WHERE t.slug = 'kalortech';
+
+INSERT INTO data_source_entries (tenant_id, data_source_id, display_order, data)
+SELECT
+  t.id,
+  ds.id,
+  13,
+  '{
+    "title": "Enterprise ERP Maintenance",
+    "description": "At Jalasoft, diagnosed and resolved critical bugs in a large-scale C# / .NET ERP serving 500+ enterprise users, including issues open for extended periods. Implemented new features under strict backward compatibility across a multi-module architecture, reducing time-to-fix by ~40%.",
+    "websiteUrl": "https://www.jalasoft.com/",
+    "image": "",
+    "tags": ["C#", ".NET", "ERP", "Enterprise Software"],
+    "category": "Production Contribution",
+    "isFeatured": false
+  }'::json
+FROM tenants t
+JOIN data_sources ds ON ds.tenant_id = t.id AND ds.slug = 'projects'
+WHERE t.slug = 'kalortech';

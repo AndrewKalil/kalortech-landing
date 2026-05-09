@@ -8,7 +8,9 @@ export const ProjectEditorCard = (props: ProjectEditorCardProps) => {
     entry,
     index,
     previewUrl,
+    categories,
     onChange,
+    onTagsChange,
     onFileChangeHandler,
     onDeleteHandler,
   } = props;
@@ -30,7 +32,17 @@ export const ProjectEditorCard = (props: ProjectEditorCardProps) => {
     onDeleteHandler(entry.id);
   }, [entry.id, onDeleteHandler]);
 
+  const onTagsInputChangeHandler = useCallback(
+    (event: React.ChangeEvent<HTMLInputElement>) => {
+      onTagsChange(index, event.target.value);
+    },
+    [index, onTagsChange],
+  );
+
   const prefix = `entries.${index}.data`;
+  const tagsDisplayValue = Array.isArray(entry.data.tags)
+    ? entry.data.tags.join(", ")
+    : String(entry.data.tags ?? "");
   const imageDisplay = previewUrl ?? entry.data.image;
 
   return (
@@ -91,22 +103,26 @@ export const ProjectEditorCard = (props: ProjectEditorCardProps) => {
         </div>
         <div className={styles.row}>
           <label className={styles.label}>Category</label>
-          <select
+          <input
             name={`${prefix}.category`}
             value={entry.data.category}
             onChange={onChange}
-            className={styles.select}
-          >
-            <option value="Library">Library</option>
-            <option value="Website">Website</option>
-          </select>
+            className={styles.input}
+            placeholder="e.g. Website"
+            list={`categories-list-${index}`}
+          />
+          <datalist id={`categories-list-${index}`}>
+            {categories.map((cat) => (
+              <option key={cat} value={cat} />
+            ))}
+          </datalist>
         </div>
         <div className={styles.row}>
           <label className={styles.label}>Tags (comma-separated)</label>
           <input
             name={`${prefix}.tags`}
-            value={entry.data.tags.join(", ")}
-            onChange={onChange}
+            value={tagsDisplayValue}
+            onChange={onTagsInputChangeHandler}
             className={styles.input}
             placeholder="React, TypeScript, SCSS"
           />

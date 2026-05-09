@@ -1,3 +1,5 @@
+import { useMemo } from "react";
+
 import { AdminLogin } from "./AdminLogin";
 import { useAdminPage } from "./AdminPage.hooks";
 import styles from "./AdminPage.module.scss";
@@ -15,9 +17,18 @@ export const AdminPage = () => {
     onAddProjectHandler,
     onDeleteEntryHandler,
     onFileChangeHandler,
+    onTagsChangeHandler,
     onSignOutHandler,
     onCancelHandler,
   } = useAdminPage();
+
+  const categories = useMemo(() => {
+    const seen = new Set<string>();
+    for (const entry of values.entries) {
+      if (entry.data.category) seen.add(entry.data.category);
+    }
+    return Array.from(seen);
+  }, [values.entries]);
 
   if (session === null) return null;
   if (!session) return <AdminLogin />;
@@ -42,7 +53,9 @@ export const AdminPage = () => {
                 entry={entry}
                 index={index}
                 previewUrl={previewUrls[entry.id]}
+                categories={categories}
                 onChange={onChange}
+                onTagsChange={onTagsChangeHandler}
                 onFileChangeHandler={onFileChangeHandler}
                 onDeleteHandler={onDeleteEntryHandler}
               />

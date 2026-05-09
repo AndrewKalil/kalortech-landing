@@ -7,15 +7,11 @@ export const ScrollManager = () => {
   useEffect(() => {
     if (location.hash) {
       const id = location.hash.slice(1);
-      const el = document.getElementById(id);
-      if (el) {
-        el.scrollIntoView({ behavior: "smooth" });
-        return;
-      }
-      // Element not yet in DOM (async render) — retry once after a frame
+      // Delay gives async data (e.g. projects carousel) time to render and
+      // stabilise layout before the scroll position is calculated.
       const timer = setTimeout(() => {
         document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
-      }, 150);
+      }, 200);
       return () => clearTimeout(timer);
     }
 
