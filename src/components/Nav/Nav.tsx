@@ -7,7 +7,7 @@ import { useNav } from "./Nav.hooks";
 import styles from "./Nav.module.scss";
 
 export const Nav = () => {
-  const { activeId, isScrolled, onItemClickHandler } = useNav();
+  const { activeId, isScrolled, isHidden, onItemClickHandler } = useNav();
 
   const onAnchorClickHandler = useCallback(
     (event: React.MouseEvent<HTMLAnchorElement>) => {
@@ -19,7 +19,7 @@ export const Nav = () => {
 
   return (
     <nav
-      className={cn(styles.nav, isScrolled && styles.navScrolled)}
+      className={cn(styles.nav, isScrolled && styles.navScrolled, isHidden && styles.navHidden)}
       aria-label="Primary"
     >
       <div className={styles.pill}>

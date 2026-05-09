@@ -6,7 +6,15 @@
   z-index: 100;
   width: max-content;
   max-width: calc(100% - 24px);
-  transition: top 280ms ease;
+  transition: top 280ms ease, transform 320ms cubic-bezier(0.22, 0.61, 0.36, 1), opacity 280ms ease;
+}
+
+@media (max-width: 820px) {
+  .navHidden {
+    transform: translateX(-50%) translateY(calc(-100% - 24px));
+    opacity: 0;
+    pointer-events: none;
+  }
 }
 
 .pill {
