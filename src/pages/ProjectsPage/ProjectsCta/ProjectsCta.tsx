@@ -1,10 +1,12 @@
+import { Link } from "react-router-dom";
+
 import styles from "./ProjectsCta.module.scss";
 
 export const ProjectsCta = () => (
   <div className={`${styles.cta} reveal`}>
     <p className={styles.text}>Have a project in mind?</p>
-    <a href="/#contact" className={styles.link}>
+    <Link to="/#contact" className={styles.link}>
       Get in touch →
-    </a>
+    </Link>
   </div>
 );

@@ -4,10 +4,10 @@ import { AppRoute } from "~constants";
 import { useProjects } from "~hooks";
 
 import styles from "./Work.module.scss";
-import { WorkCard } from "./WorkCard";
+import { WorkCarousel } from "./WorkCarousel";
 
 export const Work = () => {
-  const { featuredProjects } = useProjects();
+  const { projects } = useProjects();
 
   return (
     <section className="section" id="work">
@@ -15,16 +15,7 @@ export const Work = () => {
         <h2 className="section__title">Recent work</h2>
         <span className="mono">{"// 04 / SELECTED PROJECTS"}</span>
       </div>
-      <div className={styles.grid}>
-        {featuredProjects.map((project, index) => (
-          <div
-            key={project.id}
-            className={`reveal${index % 2 === 1 ? " reveal--right" : ""}`}
-          >
-            <WorkCard project={project} />
-          </div>
-        ))}
-      </div>
+      <WorkCarousel projects={projects} />
       <div className={`${styles.cta} reveal`}>
         <span className="mono">{"// MORE PROJECTS"}</span>
         <Link to={AppRoute.Projects} className={styles.ctaLink}>

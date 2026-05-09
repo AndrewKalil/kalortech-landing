@@ -2,10 +2,8 @@ import { useEffect } from "react";
 
 export const useScrollReveal = () => {
   useEffect(() => {
-    const els = document.querySelectorAll<HTMLElement>(".reveal");
-
     if (!("IntersectionObserver" in window)) {
-      els.forEach((el) => el.classList.add("in"));
+      document.querySelectorAll<HTMLElement>(".reveal").forEach((el) => el.classList.add("in"));
       return;
     }
 
@@ -24,7 +22,18 @@ export const useScrollReveal = () => {
       { threshold: 0.12, rootMargin: "0px 0px -8% 0px" },
     );
 
-    els.forEach((el) => io.observe(el));
-    return () => io.disconnect();
+    const observeAll = () => {
+      document.querySelectorAll<HTMLElement>(".reveal").forEach((el) => io.observe(el));
+    };
+
+    observeAll();
+
+    const mo = new MutationObserver(observeAll);
+    mo.observe(document.body, { childList: true, subtree: true });
+
+    return () => {
+      io.disconnect();
+      mo.disconnect();
+    };
   }, []);
 };

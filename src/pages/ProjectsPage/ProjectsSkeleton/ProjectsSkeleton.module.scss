@@ -1,0 +1,136 @@
+@keyframes shimmer {
+  from { background-position: -800px 0; }
+  to   { background-position:  800px 0; }
+}
+
+.shimmer {
+  background: linear-gradient(
+    90deg,
+    var(--carbon-2) 25%,
+    var(--carbon-3, rgba(255,255,255,0.06)) 50%,
+    var(--carbon-2) 75%
+  );
+  background-size: 800px 100%;
+  animation: shimmer 1.5s infinite linear;
+  border-radius: var(--r-sm);
+}
+
+// ── section block ────────────────────────────────────────────────────────────
+
+.section {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: clamp(48px, 7vw, 80px) var(--gutter);
+
+  & + & {
+    padding-top: 0;
+  }
+}
+
+// ── section header ───────────────────────────────────────────────────────────
+
+.header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 18px;
+  margin-bottom: clamp(32px, 5vw, 48px);
+  gap: 24px;
+}
+
+.headerTitle {
+  width: 120px;
+  height: 36px;
+  composes: shimmer;
+}
+
+.headerCount {
+  width: 70px;
+  height: 14px;
+  composes: shimmer;
+}
+
+// ── card grid ────────────────────────────────────────────────────────────────
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+
+  @media (max-width: 960px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+// ── skeleton card ────────────────────────────────────────────────────────────
+
+.card {
+  background: var(--carbon);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  overflow: hidden;
+}
+
+.preview {
+  aspect-ratio: 16 / 10;
+  composes: shimmer;
+  border-radius: 0;
+}
+
+.body {
+  padding: 24px 28px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.metaRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.category {
+  width: 60px;
+  height: 12px;
+  composes: shimmer;
+}
+
+.linkBtn {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--r-sm);
+  composes: shimmer;
+}
+
+.title {
+  width: 70%;
+  height: 22px;
+  composes: shimmer;
+}
+
+.desc1 {
+  width: 100%;
+  height: 14px;
+  composes: shimmer;
+}
+
+.desc2 {
+  width: 80%;
+  height: 14px;
+  composes: shimmer;
+}
+
+.tags {
+  display: flex;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+.tag {
+  width: 52px;
+  height: 22px;
+  border-radius: var(--r-pill);
+  composes: shimmer;
+}

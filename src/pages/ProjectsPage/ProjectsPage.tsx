@@ -5,6 +5,7 @@ import { ProjectCategory } from "./ProjectCategory";
 import { ProjectsCta } from "./ProjectsCta";
 import { ProjectsHeader } from "./ProjectsHeader";
 import { ProjectsNav } from "./ProjectsNav";
+import { ProjectsSkeleton } from "./ProjectsSkeleton";
 
 const CATEGORY_TITLES: Record<string, string> = {
   Library: "Libraries",
@@ -15,20 +16,24 @@ const getCategoryTitle = (category: string) => CATEGORY_TITLES[category] ?? `${c
 
 export const ProjectsPage = () => {
   useScrollReveal();
-  const { projectsByCategory } = useProjects();
+  const { projectsByCategory, isLoading } = useProjects();
 
   return (
     <>
       <ProjectsNav />
       <main>
         <ProjectsHeader />
-        {Object.entries(projectsByCategory).map(([category, projects]) => (
-          <ProjectCategory
-            key={category}
-            title={getCategoryTitle(category)}
-            projects={projects}
-          />
-        ))}
+        {isLoading ? (
+          <ProjectsSkeleton />
+        ) : (
+          Object.entries(projectsByCategory).map(([category, projects]) => (
+            <ProjectCategory
+              key={category}
+              title={getCategoryTitle(category)}
+              projects={projects}
+            />
+          ))
+        )}
         <ProjectsCta />
       </main>
       <Footer />
