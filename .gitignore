@@ -18,6 +18,12 @@ dist-ssr
 .env.*.local
 .env.production
 
+# Supabase temp files
+supabase/.temp/
+
+# Claude Code project state
+.claude/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

@@ -12,6 +12,7 @@
   "dependencies": {
     "@kalortech/eslint-config": "^1.5.0",
     "@kalortech/shared-logic": "^1.6.0",
+    "@supabase/supabase-js": "^2.105.4",
     "antd": "^6.3.7",
     "classnames": "^2.5.1",
     "formik": "^2.4.9",

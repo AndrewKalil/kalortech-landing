@@ -73,6 +73,7 @@ export default defineConfig(({ mode }) => {
         "~constants": path.resolve(__dirname, "src/constants"),
         "~pages": path.resolve(__dirname, "src/pages"),
         "~services": path.resolve(__dirname, "src/services"),
+        "~integrations": path.resolve(__dirname, "src/integrations"),
       },
     },
   };
