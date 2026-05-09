@@ -5,7 +5,7 @@ export const Contact = () => (
   <section className="section" id="contact">
     <div className="section__head reveal reveal--right">
       <h2 className="section__title">Contact</h2>
-      <span className="mono">{"// 05 / GET IN TOUCH"}</span>
+      <span className="mono">{"// 06 / GET IN TOUCH"}</span>
     </div>
     <div className={styles.grid}>
       <div className={`${styles.lead} reveal`}>

@@ -1,0 +1,32 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-bottom: clamp(40px, 6vw, 56px);
+
+  @media (max-width: 720px) {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}
+
+.cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding-top: 28px;
+  border-top: 1px solid var(--line);
+}
+
+.ctaLink {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--volt);
+  transition: opacity 200ms ease;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}

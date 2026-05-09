@@ -4,7 +4,7 @@ export const About = () => (
   <section className="section" id="about">
     <div className="section__head reveal">
       <h2 className="section__title">About</h2>
-      <span className="mono">{"// 04 / WHO IS BEHIND IT"}</span>
+      <span className="mono">{"// 05 / WHO IS BEHIND IT"}</span>
     </div>
     <div className={styles.grid}>
       <div className={`${styles.label} reveal`}>
