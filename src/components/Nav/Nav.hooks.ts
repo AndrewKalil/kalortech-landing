@@ -2,7 +2,11 @@ import { useCallback, useEffect, useState } from "react";
 
 import { NAV_ITEMS } from "./Nav.constants";
 
-const SECTION_IDS = NAV_ITEMS.map((item) => item.id);
+const SECTION_IDS = NAV_ITEMS.flatMap((item) => {
+  if (!item.href) return [item.id];
+  if (item.sectionId) return [item.sectionId];
+  return [];
+});
 
 export const useNav = () => {
   const [activeId, setActiveId] = useState("top");

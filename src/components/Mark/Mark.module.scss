@@ -11,15 +11,16 @@
 
 .br {
   font-weight: 500;
-  color: var(--volt);
+  color: var(--bone);
   opacity: 0.72;
-  transition: opacity 240ms ease;
+  transition: color 240ms ease, opacity 240ms ease;
 
   &.left  { margin-right: 0.02em; }
   &.right { margin-left:  0.01em; }
 }
 
 .mark:hover .br {
+  color: var(--volt);
   opacity: 1;
 }
 
