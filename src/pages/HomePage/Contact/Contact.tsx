@@ -26,7 +26,7 @@ export const Contact = () => (
           <div className={styles.detailItem}>
             <span className="mono">{"// EMAIL"}</span>
             <div className={styles.detailVal}>
-              <a href="mailto:andrewkalil99@gmail.com">andrewkalil99@gmail.com</a>
+              <a href="mailto:info@kalort.com">info@kalort.com</a>
             </div>
           </div>
           <div className={styles.detailItem}>
