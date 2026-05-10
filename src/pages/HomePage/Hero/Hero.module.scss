@@ -56,6 +56,15 @@
   margin-top: 32px;
   flex-wrap: wrap;
   animation: fadeUp 800ms 240ms ease both;
+
+  @media (max-width: 600px) {
+    flex-wrap: nowrap;
+
+    :global(.btn) {
+      flex: 1;
+      justify-content: center;
+    }
+  }
 }
 
 .meta {
